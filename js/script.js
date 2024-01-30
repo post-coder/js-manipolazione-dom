@@ -1,12 +1,10 @@
 
 const titleElement = document.querySelector("h1");
 
-console.log(titleElement);
+// console.log(titleElement);
 
-const newSize = prompt("Di che dimensione vuoi il titolo?");
+// titleElement.className = titleElement.className + " big";
 
-titleElement.style.fontSize = newSize;
+titleElement.className += " big";
 
-titleElement.style.backgroundColor = prompt("Quale colore di sfondo?");
-titleElement.style.color = "white";
-titleElement.style.padding = "12px";
+
