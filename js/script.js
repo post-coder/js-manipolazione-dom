@@ -1,45 +1,34 @@
 
+// salvataggio degli elementi del DOM
 const titleElement = document.querySelector("h1");
-
 const buttonElement = document.querySelector("#pulsante");
+const inputElement = document.querySelector("#colorInput");
 
 console.log(buttonElement)
 
-
-// il pulsante è collegato ad una specie di lampadina
-// se la lampadina è spenta e premiamo il pulsante, si accende e viceversa
-
-// la lampadina è accesa
-let lampadinaAccesa = true;
+// memorizziamo il campo di input
 
 
-
-buttonElement.addEventListener('mouseleave',
+buttonElement.addEventListener('click',
     function() {
 
-        // se la lampada è spenta, accendila
-        // viceversa
+        // al click il colore del titolo sarà uguale al valore del campo di input
 
-        if (lampadinaAccesa) {
+        titleElement.style.color = inputElement.value;
 
-            lampadinaAccesa = false;
-
-            // cambio il testo del titolo
-            titleElement.innerText = "Lampadina spenta"; 
-            titleElement.className = "spenta";
-
-            console.log(lampadinaAccesa) 
+    }
+)
 
 
-        } else {
+// ________________________________________
 
-            lampadinaAccesa = true;
+const buttonSaluteElement = document.querySelector("#sezioneSaluto button");
 
-            titleElement.innerText = "Lampadina accesa";
-            titleElement.className = "accesa";
+const inputSaluteElement = document.querySelector("#sezioneSaluto input");
 
-            console.log(lampadinaAccesa);
-        }
 
+buttonSaluteElement.addEventListener("wheel", 
+    function() {
+        document.querySelector("#sezioneSaluto h2").innerHTML = "Ciao " + inputSaluteElement.value;
     }
 )
