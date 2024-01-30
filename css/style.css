@@ -1,15 +1,10 @@
-.red {
-    color: red;
+
+.accesa {
+    background-color: yellow;
+    color: orange;
 }
 
-.blue {
-    color: blue;
-}
-
-.green {
-    color: green;
-}
-
-.big {
-    font-size: 48px;
+.spenta {
+    background-color: black;
+    color: gray;
 }
