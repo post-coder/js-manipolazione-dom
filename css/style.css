@@ -1,10 +1,37 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-.accesa {
-    background-color: yellow;
-    color: orange;
+    position: relative;
+    
+    padding: 12px;
+
+    background-color: black;
+    color: white;
+
 }
 
-.spenta {
+nav #hamburger-button {
+    height: 36px;
+}
+
+nav #hamburger-button img {
+    height: 100%;
+}
+
+nav #side-menu {
+    display: none;
+}
+
+nav #side-menu.active {
+    display: block;
+    
+    position: absolute;
+    right: 0;
+    top: 56px;
+
+    padding: 12px 24px;
+
     background-color: black;
-    color: gray;
 }

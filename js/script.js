@@ -1,34 +1,25 @@
+const hamburgerMenuElement = document.querySelector("#hamburger-button");
+const menuElement = document.querySelector("#side-menu");
 
-// salvataggio degli elementi del DOM
-const titleElement = document.querySelector("h1");
-const buttonElement = document.querySelector("#pulsante");
-const inputElement = document.querySelector("#colorInput");
+// al click del pulsante
+// il menu ha la classe active
 
-console.log(buttonElement)
-
-// memorizziamo il campo di input
+// teniamo traccia dell'apertura del menu laterale in una variabile
+let isMenuOpen = false
 
 
-buttonElement.addEventListener('click',
+hamburgerMenuElement.addEventListener("click",
     function() {
 
-        // al click il colore del titolo sarà uguale al valore del campo di input
+        if(isMenuOpen) {
+            menuElement.className = "";
 
-        titleElement.style.color = inputElement.value;
+            isMenuOpen = false;
+        } else {
+            menuElement.className = "active";
 
-    }
-)
+            isMenuOpen = true;
+        }
 
-
-// ________________________________________
-
-const buttonSaluteElement = document.querySelector("#sezioneSaluto button");
-
-const inputSaluteElement = document.querySelector("#sezioneSaluto input");
-
-
-buttonSaluteElement.addEventListener("wheel", 
-    function() {
-        document.querySelector("#sezioneSaluto h2").innerHTML = "Ciao " + inputSaluteElement.value;
     }
 )
